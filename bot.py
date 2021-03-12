@@ -19,9 +19,6 @@ async def  embed (context):
     await context.message.channel.send(embed=myEmbed)
 
 
-
-    
-
 #kick command 
 @client.command(name='kick',pass_context=True)
 @commands.has_permissions(kick_members=True)
@@ -54,10 +51,6 @@ async def meme(context):
      await context.send(file=discord.File(random_image))
 
  
-
-
-
-
  # replying to messages 
 @client.event
 async def on_message(message):
