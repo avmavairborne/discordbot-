@@ -1,13 +1,11 @@
-
-
 import discord 
 from discord.ext import commands 
 import random 
 
 
-# commmand 
+#commmand 
 client = commands.Bot(command_prefix='[chosen command')
- # for the embed 
+# for the embed 
 @client.command(name='embed')
 async def  embed (context):
     myEmbed = discord.Embed(title='[title of the embed]', description='[description of the embed]',color=0x00ff00)
@@ -51,7 +49,7 @@ async def meme(context):
      await context.send(file=discord.File(random_image))
 
  
- # replying to messages 
+#replying to messages 
 @client.event
 async def on_message(message):
     if message.content == "messgae":
@@ -67,7 +65,7 @@ async def on_message(message):
         general_channel = client.get_channel(text channel ID)
         await general_channel.send('reply')
     #repeat for as many message as you want
-# replying to dms 
+#replying to dms 
     if message.content=='message':
         await message.author.send('reply')
     if message.content =='message':
@@ -81,10 +79,10 @@ async def on_message(message):
 
    # repeat for as many messages as you want 
   
- # displaying status 
+ #displaying status 
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.online,activity=discord.Game('staus you want to display'))
-# link with the application 
+   # link with the application 
 
 client.run("enter client ID")
